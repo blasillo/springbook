@@ -24,6 +24,7 @@ public class Feedback extends BaseEntity {
 
     @Column (name="NOTA")
     private Double note;
+
     @Column (name="DESCRIPCION",length=1000)
     private String comment;
 

@@ -16,18 +16,16 @@ public class BookController {
 
     private final BookService service;
 
-    @GetMapping
-    public ResponseEntity<String> sayHello () {
-        return ResponseEntity.ok("Hola");
+    @GetMapping("{book_id}")
+    public ResponseEntity<BookResponse> bookById (@PathVariable("book_id") Integer bookId ) {
+        return ResponseEntity.ok(service.findById(bookId));
     }
 
     @PostMapping
     public ResponseEntity<Integer> saveBook (
             @Valid @RequestBody BookRequest request
     ) {
-
         return ResponseEntity.ok ( service.save(request) );
-
     }
 
 

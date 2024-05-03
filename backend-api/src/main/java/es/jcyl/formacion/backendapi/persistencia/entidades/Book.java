@@ -56,4 +56,10 @@ public class Book extends BaseEntity {
     @OneToMany(mappedBy = "book")
     private List<BookTransactionHistory>  histories;
 
+    @Transient
+    public double getRate () {
+        // TODO: calcular el promedio de las notas
+        return 0.0;
+    }
+
 }

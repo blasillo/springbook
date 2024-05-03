@@ -9,7 +9,6 @@ public class ApplicationAuditAware implements AuditorAware<Integer> {
     public Optional<Integer> getCurrentAuditor() {
         // Authentication auth = ...
 
-        final var result  = Optional.of(new Integer("0"));
-        return result ;
+        return Optional.of(new Integer("0")) ;
     }
 }
