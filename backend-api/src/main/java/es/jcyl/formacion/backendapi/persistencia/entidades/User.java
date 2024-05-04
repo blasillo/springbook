@@ -39,6 +39,7 @@ public class User {
 
     @Column(name="CORREO", length = 200, nullable = false, unique = true)
     private String email;
+
     @Column(name="CONTRASENA", length = 255, nullable = false )
     private String password;
 

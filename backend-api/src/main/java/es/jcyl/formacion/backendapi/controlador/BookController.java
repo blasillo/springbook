@@ -28,5 +28,14 @@ public class BookController {
         return ResponseEntity.ok ( service.save(request) );
     }
 
+    @GetMapping
+    public ResponseEntity<PageResponse<BookResponse>> findAllBook (
+            @RequestParam(name = "page", defaultValue = "0", required = false) int page,
+            @RequestParam(name = "size", defaultValue = "10", required = false) int size )
+    {
+
+        return ResponseEntity.ok ( service.findAllBooks (page, size) );
+    }
+
 
 }

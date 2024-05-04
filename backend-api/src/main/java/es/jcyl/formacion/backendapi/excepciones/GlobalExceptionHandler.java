@@ -21,7 +21,7 @@ public class GlobalExceptionHandler {
                 .status(INTERNAL_SERVER_ERROR)
                 .body (ExceptionResponse
                         .builder()
-                        .businessErrorDescription("Error en la aplicación, contacte con soporte")
+                        .businessErrorDescription("Error en la aplicación, contacte con el CAU")
                         .error( exp.getMessage() )
                         .build()
                 );
